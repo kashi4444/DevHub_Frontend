@@ -23,7 +23,7 @@ const Requests = () => {
       setTimeout(()=>{
         setShowToast(false);
         setCurrStatus("");
-      })
+      },3000);
     } catch (err) {
       console.error(err);
     }
@@ -56,7 +56,7 @@ const Requests = () => {
           return (
             <div key={_id} className="max-w-2/3 mx-auto">
               <ul className="list bg-base-100 rounded-box shadow-md">
-                <li className="list-row bg-base-300">
+                <li className="list-row bg-base-300 mb-3">
                   <div>
                     <img
                       className="rounded-full aspect-square object-cover h-20"
@@ -95,7 +95,7 @@ const Requests = () => {
       {showToast && (
         <div className="toast toast-top toast-center">
           <div className="alert alert-success text-lg">
-            <span>Request {currStatus}!!!</span>
+            <span className="text-white">Request {currStatus}!!!</span>
           </div>
         </div>
       )}
